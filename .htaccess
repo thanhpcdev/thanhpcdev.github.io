@@ -1,0 +1,51 @@
+RewriteEngine On
+# NDK Dark
+RewriteRule ^user/profile$ public/client/Profile.php [L]
+RewriteRule ^Auth/Register$ public/client/Register.php [L]
+RewriteRule ^Auth/Login$ public/client/Login.php [L]
+RewriteRule ^Auth/Logout$ public/client/Logout.php [L]
+RewriteRule ^recharge/card$ public/client/NapThe.php [L]
+RewriteRule ^create$ public/client/Select.php [L]
+RewriteRule ^Create-template/([A-Za-z0-9-]+) public/client/Create-website.php?id=$1 [L]
+RewriteRule ^Buy-Source/([A-Za-z0-9-]+) public/client/MuaCode.php?id=$1 [L]
+RewriteRule ^Buy-Hosting/([A-Za-z0-9-]+) public/client/MuaHosting.php?id=$1 [L]
+RewriteRule ^Domain$ public/client/Domain.php [L]
+RewriteRule ^View-Source$ public/client/Code.php [L]
+RewriteRule ^recharge/bank$ public/client/ChuyenKhoan.php [L]
+RewriteRule ^Whois$ public/client/Whois.php [L] 
+RewriteRule ^list-shop$ public/client/HistoryShop.php [L]
+RewriteRule ^History-Source$ public/client/HistoryCode.php [L]
+RewriteRule ^user/cart$ public/client/NguyenKhoi.php [L]
+RewriteRule ^hosting$ public/client/Hosting.php [L]
+# Aadmin Panel
+RewriteRule ^Admin/$ public/admin/Home.php [L]
+RewriteRule ^Admin/Home$ public/admin/Home.php [L]
+RewriteRule ^Admin/Users$ public/admin/Users.php [L]
+RewriteRule ^Admin/User/Edit/([A-Za-z0-9-]+) public/admin/EditUser.php?id=$1 [L]
+RewriteRule ^Admin/Setting$ public/admin/Setting.php [L]
+RewriteRule ^Admin/Cards$ public/admin/Cards.php [L]
+RewriteRule ^Admin/Bank$ public/admin/Bank.php [L]
+RewriteRule ^Admin/Domain-Sold$ public/admin/domain-Sold.php [L]
+RewriteRule ^Admin/Shop-Sold$ public/admin/shop-Sold.php [L] 
+RewriteRule ^Admin/AddDomain$ public/admin/AddDomain.php [L]
+RewriteRule ^Admin/AddShop$ public/admin/AddShop.php [L]
+RewriteRule ^Admin/AddCode$ public/admin/AddCode.php [L]
+RewriteRule ^Admin/Domain/Edit/([A-Za-z0-9-]+)$ public/admin/EditDomain.php?id=$1 [L]
+RewriteRule ^Admin/Shop/Edit/([A-Za-z0-9-]+)$ public/admin/Editshop.php?id=$1 [L]
+# VUI LÒNG KHÔNG SỬA
+RewriteRule ^Admin/Goi/Add/([A-Za-z0-9-]+)$ public/admin/AddGoi.php?id=$1 [L]
+RewriteRule ^Admin/Goi/Edit/([A-Za-z0-9-]+)$ public/admin/EditGoi.php?id=$1 [L]
+RewriteRule ^Admin/Goi/Delete/([A-Za-z0-9-]+)$ public/admin/EditGoi.php?delete=$1 [L]
+RewriteRule ^Admin/Server/Edit/([A-Za-z0-9-]+)$ public/admin/EditServer.php?id=$1 [L]
+RewriteRule ^Admin/Server$ public/admin/AddServer.php [L]
+RewriteRule ^Admin/Server/Delete/([A-Za-z0-9-]+)$ public/admin/AddServer.php?delete=$1 [L]
+RewriteRule ^Admin/Hosting/Edit/([A-Za-z0-9-]+)$ public/admin/EditHost.php?id=$1 [L]
+# Error
+ErrorDocument 404 /public/client/404.php
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php56” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php56 .php .php5 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
